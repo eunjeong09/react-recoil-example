@@ -8,12 +8,13 @@ const Item = ({ id }) => {
   const itemClick = () => {
     setSelectedItem(id);
   };
+  console.log(name);
   return (
     <div className="item">
       <div className="itemName">{name}</div>
       <img
         className={selectedItem === id ? "selected" : ""}
-        src={url}
+        // src={url}
         alt={name}
         onClick={itemClick}
       />

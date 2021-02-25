@@ -1,19 +1,27 @@
-import React from "react";
-import {
-  RecoilRoot,
-  atom,
-  selector,
-  useRecoilValue,
-  useSetRecoilState
-} from "recoil";
+import React, { Suspense } from "react";
+import { useRecoilState } from "recoil";
+import Items from "./component/items";
+import RightInfo from "./component/rightInfo";
+import { itemListState } from "./component/store";
 
+import "./style/style.css";
 
 export default function App() {
+  const [itemList, setItemList] = useRecoilState(itemListState);
+  const counter = itemList.length + 1;
+  const addItem = () => {
+    setItemList([...itemList, counter]);
+  };
+
   return (
-    <RecoilRoot>
+    <div>
       <div className="App">
-        
+        <Suspense fallback="Loading...">
+          <Items />
+          <RightInfo />
+        </Suspense>
       </div>
-    </RecoilRoot>
+      {counter <= 6 && <button onClick={addItem}>Add Item</button>}
+    </div>
   );
 }

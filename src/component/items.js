@@ -7,9 +7,9 @@ const Items = () => {
   const itemList = useRecoilValue(itemListState);
   return (
     <div className="itemsWrap">
-      {imageList.map((id) => (
+      {itemList.map((id) => (
         // <Suspense key={id} fallback="Loading...">
-        <Image id={id} key={id} />
+        <Item id={id} key={id} />
         // </Suspense>
       ))}
     </div>

@@ -3,8 +3,8 @@ import { atom, atomFamily } from "recoil";
 
 const getItem = async (id) => {
   return new Promise((resolve) => {
-    // const url=``;
-    const url=`../images/${id}.png`;
+    const url=`../images/cash.svg`;
+    // const url=`../images/${id}.png`;
     let image = new Image();
     image.onload = () =>
       resolve({
@@ -14,7 +14,7 @@ const getItem = async (id) => {
         metadata: {
         //   width: `${image.width}px`,
         //   height: `${image.height}px`,
-            name:'이름',
+            company:'회사',
             price:'가격'
 
         },
