@@ -1,0 +1,51 @@
+ /* App */
+.App{
+    padding: 2rem;
+    height: 6rem;
+}
+
+ /* item */
+ .itemsWrap{
+     width: 55%;
+     display: inline-block;
+     float: left;
+ }
+ .item{
+     display: inline-block;
+     float: left;
+     margin: 1rem;
+     cursor: pointer;
+ }
+ .itemName{
+     font-weight: bold;
+     font-size: 23px;
+ }
+
+
+/* rightInfo */
+.rightInfoArea{
+    width: 40%;
+    display: inline-block;
+    float: left;
+    border-left: 3px solid black;
+    padding: 1rem;
+}
+.rightInfoArea div{
+    margin-bottom: 10px;
+}
+
+
+/* button */
+.buttonWrap{
+    margin-top: 2rem;
+}
+.button{
+    width: 15%;
+    border: 1px solid black;
+    border-radius: 10px;
+    height: 2rem;
+    text-align: center;
+    line-height: 2rem;
+    background-color: cadetblue;
+    margin-left: 3rem;
+}

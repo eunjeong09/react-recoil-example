@@ -21,12 +21,12 @@ const RightInfo = () => {
       <div>
         <b>Id:</b> {item.id}
       </div>
-      {/* <div>
+      <div>
         <b>Company:</b> {item.rightInfo.company}
       </div>
       <div>
         <b>Price:</b> {item.rightInfo.price}
-      </div> */}
+      </div>
     </div>
   );
 };

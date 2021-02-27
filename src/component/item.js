@@ -4,21 +4,19 @@ import { itemState, selectedItemState } from "./store";
 
 const Item = ({ id }) => {
   const { name, url } = useRecoilValue(itemState(id));
-  console.log(name);
   const [selectedItem, setSelectedItem] = useRecoilState(selectedItemState);
   const itemClick = () => {
     setSelectedItem(id);
   };
-  console.log(name);
   return (
-    <div className="item">
+    <div className="item" onClick={itemClick}>
       <div className="itemName">{name}</div>
       <img
         className={selectedItem === id ? "selected" : ""}
         src={url}
         alt={name}
-        onClick={itemClick}
       />
+      {/* <p>item</p> */}
     </div>
   );
 };

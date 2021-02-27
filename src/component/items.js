@@ -9,7 +9,7 @@ const Items = () => {
     <div className="itemsWrap">
       {itemList.map((id) => (
         <Suspense key={id} fallback="Loading...">
-          <Item id={id} key={id} />
+          <Item id={id}/>
         </Suspense>
       ))}
     </div>
