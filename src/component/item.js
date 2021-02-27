@@ -4,6 +4,7 @@ import { itemState, selectedItemState } from "./store";
 
 const Item = ({ id }) => {
   const { name, url } = useRecoilValue(itemState(id));
+  console.log(name);
   const [selectedItem, setSelectedItem] = useRecoilState(selectedItemState);
   const itemClick = () => {
     setSelectedItem(id);
@@ -14,7 +15,7 @@ const Item = ({ id }) => {
       <div className="itemName">{name}</div>
       <img
         className={selectedItem === id ? "selected" : ""}
-        // src={url}
+        src={url}
         alt={name}
         onClick={itemClick}
       />

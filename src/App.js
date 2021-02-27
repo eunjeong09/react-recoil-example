@@ -4,6 +4,8 @@ import Items from "./component/items";
 import RightInfo from "./component/rightInfo";
 import { itemListState } from "./component/store";
 
+// import recoil from "./images/cash.svg";
+
 import "./style/style.css";
 
 export default function App() {
@@ -16,6 +18,7 @@ export default function App() {
   return (
     <div>
       <div className="App">
+        <img src={recoil} alt="dd" />
         <Suspense fallback="Loading...">
           <Items />
           <RightInfo />

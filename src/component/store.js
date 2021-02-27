@@ -3,7 +3,7 @@ import { atom, atomFamily } from "recoil";
 
 const getItem = async (id) => {
   return new Promise((resolve) => {
-    const url=`../images/cash.svg`;
+    const url = "../images/cash.svg";
     // const url=`../images/${id}.png`;
     let image = new Image();
     image.onload = () =>
@@ -11,21 +11,20 @@ const getItem = async (id) => {
         id,
         name: `Item ${id}`,
         url,
-        metadata: {
-        //   width: `${image.width}px`,
-        //   height: `${image.height}px`,
-            company:'회사',
-            price:'가격'
-
+        rightInfo: {
+          width: `${image.width}px`,
+          height: `${image.height}px`,
+        //   company: "회사",
+        //   price: "가격",
         },
       });
-      image.src = url;
+    image.src = url;
   });
 };
 
 export const itemState = atomFamily({
   key: "itemState",
-  default: async (id) => getItem(id),
+  default: async (id) => getItem(id)
 });
 
 export const selectedItemState = atom({

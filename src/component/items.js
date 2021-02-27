@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Suspense } from "react";
 import { useRecoilValue } from "recoil";
 import { itemListState } from "./store";
 import Item from "./item";
@@ -8,9 +8,9 @@ const Items = () => {
   return (
     <div className="itemsWrap">
       {itemList.map((id) => (
-        // <Suspense key={id} fallback="Loading...">
-        <Item id={id} key={id} />
-        // </Suspense>
+        <Suspense key={id} fallback="Loading...">
+          <Item id={id} key={id} />
+        </Suspense>
       ))}
     </div>
   );
