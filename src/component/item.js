@@ -9,14 +9,12 @@ const Item = ({ id }) => {
     setSelectedItem(id);
   };
   return (
-    <div className="item" onClick={itemClick}>
+    <div className={selectedItem === id ? "item selected" : "item"} onClick={itemClick}>
       <div className="itemName">{name}</div>
       <img
-        className={selectedItem === id ? "selected" : ""}
         src={url}
         alt={name}
       />
-      {/* <p>item</p> */}
     </div>
   );
 };

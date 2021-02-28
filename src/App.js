@@ -4,8 +4,6 @@ import Items from "./component/items";
 import RightInfo from "./component/rightInfo";
 import { itemListState } from "./component/store";
 
-import recoil from "./images/cash.svg";
-
 import "./style/style.css";
 
 export default function App() {

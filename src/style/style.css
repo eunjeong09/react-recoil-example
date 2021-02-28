@@ -4,9 +4,13 @@
     height: 6rem;
 }
 
+img{
+    width: 6rem;
+}
+
  /* item */
  .itemsWrap{
-     width: 55%;
+     width: 65%;
      display: inline-block;
      float: left;
  }
@@ -16,6 +20,10 @@
      margin: 1rem;
      cursor: pointer;
  }
+ .item.selected{
+     border: 3px solid rgb(252, 67, 46);
+ }
+
  .itemName{
      font-weight: bold;
      font-size: 23px;
@@ -24,7 +32,7 @@
 
 /* rightInfo */
 .rightInfoArea{
-    width: 40%;
+    width: 30%;
     display: inline-block;
     float: left;
     border-left: 3px solid black;
@@ -37,7 +45,8 @@
 
 /* button */
 .buttonWrap{
-    margin-top: 2rem;
+    margin-top: 8rem;
+    cursor: pointer;
 }
 .button{
     width: 15%;

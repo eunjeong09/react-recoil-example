@@ -5,6 +5,7 @@ import { selectedItemState, itemState } from "./store";
 const RightInfo = () => {
   const selectedItemId = useRecoilValue(selectedItemState);
   const [item, setItem] = useRecoilState(itemState(selectedItemId));
+  console.log(item);
   const onChange = e => {
     const value = e.target.value;
     setItem({
